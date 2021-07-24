@@ -8,10 +8,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter size array");
         int size = scanner.nextInt();
-        int[] array = ArrayGenerator.createArray(size);
-        int[] resultFilterArray = ArrayFilter.orderTheArray(array);
-        for (int i = 0; i < resultFilterArray.length; i++) {
-            System.out.println(resultFilterArray[i]);
+        if (size > 0) {
+            int[] array = ArrayGenerator.createArray(size);
+            int[] resultFilterArray = ArrayFilter.orderTheArray(array);
+            for (int i = 0; i < resultFilterArray.length; i++) {
+                System.out.println(resultFilterArray[i]);
+            }
+        } else {
+            System.out.println("Array size must be greater than 0 ");
         }
     }
 }
