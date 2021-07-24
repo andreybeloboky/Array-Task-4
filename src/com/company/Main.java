@@ -9,11 +9,9 @@ public class Main {
         System.out.println("Enter size array");
         int size = scanner.nextInt();
         if (size > 0) {
-            int[] array = ArrayGenerator.createArray(size);
+            int[] array = ArrayGenerator.create(size);
             int[] resultFilterArray = ArraySorter.selectionSort(array);
-            for (int i = 0; i < resultFilterArray.length; i++) {
-                System.out.println(resultFilterArray[i]);
-            }
+            ArrayOutput.consoleOutput(resultFilterArray);
         } else {
             System.out.println("Array size must be greater than 0 ");
         }
