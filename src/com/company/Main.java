@@ -10,7 +10,7 @@ public class Main {
         int size = scanner.nextInt();
         if (size > 0) {
             int[] array = ArrayGenerator.createArray(size);
-            int[] resultFilterArray = ArrayFilter.orderTheArray(array);
+            int[] resultFilterArray = ArraySorter.selectionSort(array);
             for (int i = 0; i < resultFilterArray.length; i++) {
                 System.out.println(resultFilterArray[i]);
             }
